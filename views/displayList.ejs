@@ -1,0 +1,11 @@
+<a href="/"> GO HOME </a><br>
+<table style="font-size:large">
+        <% for(var i=0; i<results.length; i++) { %>
+            <tr>
+                <td><%= results[i].userName %> </td>
+                <td> <%= results[i].password %> </td>
+                <!-- <td> <%= results[i].name %> </td>
+                <td> <%= results[i].age %> </td> -->
+            </tr>
+        <% } %>
+    </table>

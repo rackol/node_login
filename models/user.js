@@ -1,17 +1,15 @@
-// grab the things we need
-var mongoose = require('mongoose');
+var mongoose=require('mongoose');
+var Food=require('./food')
 var Schema = mongoose.Schema;
 
-// create a schema
-var userSchema = new Schema({
-  name: String,
-  userName: String,
-  password: String,
-  age: Number
+var userSchema=new Schema({
+    name:String,
+    userName:String,
+    password: String,
+    age: Number,
+    //food: Food.schema
+    food: Array
 });
 
-//attach schema to model
-var User = mongoose.model('User', userSchema);
-
-// make this available to our users in our Node applications
-module.exports = User;
+var User=mongoose.model('User', userSchema);
+module.exports=User;

@@ -1,43 +1,26 @@
 <html>
-
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        
-    function go() {
-        $.ajax({
-        url : "http://localhost:3000/post",
-        type: "POST",
-        data : {name:"matt"},
-        success: postProcess
-    });
-
-
-    }
-    function process(data) {
-
-       console.log(data);
-
-    }        
-    function postProcess(data,status) {
-
-        console.log(data);
-        console.log("Status:" + status);
-
-    }        
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>   
 </script>
 </head>
 
-<body>
+<body background="images/dots.jpg" height="100%">
+        <style>
+                body{color: white;}
+                body{font-size: 40px;}
+                body{background-repeat: no-repeat;}
+                body{background-size: 100%;}
+            </style>
+    <br> 
+    <form action="login" method="post">
+        Login:<br><br>
+        Username: <input type="text" name="userName" size="15" value="rackol"><br><br>
+        Password:  <input type="text"  name="password"size="15" value="cat123"><br><br>
+        <input type="submit">
+    </form>
+    <a href='/displayList' name="list" value="Print List">List them</a>
 
-  LOGIN
-  <form action="login" method="post">
-    <input type="text" name="username" value="cole">
-    <input type="text" name="password" value="123">
-    <input type="submit">
-</form>
-
+    <div id="div1"></div>
 </body>
-
-
 </html>

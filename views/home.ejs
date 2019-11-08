@@ -1,24 +1,62 @@
 <html>
 <head>
+<script>
 
+function validate(form) {
+    if(form.userName.length==0){
+        return false;
+    }else{
+        return true;
+    }
+    if(form.password.length==0){
+        return false;
+    }else{
+        return true;
+    }
+    if(form.name.length==0){
+        return false;
+    }else{
+        return true;
+    }
+    if(form.age.length==0){
+        return false;
+    }else{
+        return true;
+    }
+}
+</script>
 </head>
 
-<body>
 
-Username is: <%= user.userName %> <br>
-Password is: <%= user.password %> <br>
-Name is: <%= user.name %> <br>
-Age is: <%= user.age %> <br>
+<a href="/"> GO HOME </a>
 
-    <form action="addAttributes" method="post">
-        Name: <input type="text" name="name">
-        Age: <input type="text" name="age">
-        <input type="submit" value="ADD STUFF">
+<body  background="images/images-2.jpg"><br>
+    Yay,  <%= userObject.name %> you did it! <br>
+    Your username is: <%= userObject.userName %> <br>
+    Your password is:  <%= userObject.password %><br>
+    You are <%= userObject.age %> years old<br><br>
+
+
+
+    <form onsubmit="return validate(this)" action="addAttributes" method="post">
+        Edit information: <br>
+        Name: <input type="text" name="name" size="15" value=""> <br>
+        Age: <input type="text" name="age" size="15" value=""><br>
+        <input type="submit" value="update">
     </form>
 
+    <form onsubmit="" action="addAttributes" method="post">
+        Add Food: <br>
+        food: <input type="text" name="food" size="15" value=""> <br>
+        <input type="submit" value="add">
+    </form>
+
+    <style>
+        body{color: white;}
+        body{font-size: 40px;}
+        body{background-repeat: no-repaeat;}
+        body{background-size: 100%;}
+    </style>
 
 </body>
-
-
 </html>
-
